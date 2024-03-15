@@ -69,7 +69,7 @@ function refreshCards() {
 
     myLibrary.forEach((book) => {
 
-        bookbuilder(book.title, book.author, book.pages, book.hasRead);
+        bookbuilder(book);
     })
 
 }
@@ -84,27 +84,47 @@ function clearCards() {
 
 }
 
-function bookbuilder(bookTitle, authorInput, pageCount, hasRead) {
-    let div = document.createElement("div")
+function bookbuilder(book) {
+
+    let div = document.createElement("div");
     div.classList.add("book");
     div.classList.add("check");
+    // allow easy lookup
+    div.id = book.bookID;
 
     let title = document.createElement("p")
     title.classList.add("title");
-    title.textContent = bookTitle;
+    title.textContent = book.title;
 
     let author = document.createElement("p")
     author.classList.add("author");
-    author.textContent = authorInput;
+    author.textContent = book.author;
 
     let pages = document.createElement("p")
     pages.classList.add("pageCount");
-    pages.textContent = pageCount;
+    pages.textContent = book.pages;
 
     // Use as a selector to apply a checkmark 
-    if (hasRead) {
+    if (book.hasRead) {
         div.classList.add("complete");
     }
+
+    // Add event listener for finishing a book
+
+    div.addEventListener('click', (e) => {
+
+        let target = e.currentTarget;
+
+        if (target.classList.contains("complete")) {
+            target.classList.remove("complete");
+            return;
+        }
+
+        e.currentTarget.classList.add("complete");
+
+
+    })
+
 
     div.appendChild(title)
     div.appendChild(author)
@@ -131,6 +151,7 @@ class Book {
         }
 
         this.hasRead = true;
+        refreshCards();
         return `You've finished ${this.title} ID: ${this.bookID}`;
     }
 
@@ -138,6 +159,10 @@ class Book {
     assignID() {
         let newID = myLibrary.length;
         this.bookID = (this.bookID === -1) ? this.bookID = newID : this.book
+    }
+
+    toggleComplete() {
+        this.hasRead = !this.hasRead;
     }
 }
 
