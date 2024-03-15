@@ -19,11 +19,14 @@
     3. Add accessible line-height
     4. Improve text rendering
   */
+
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 /*
