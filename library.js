@@ -91,6 +91,7 @@ function bookbuilder(book) {
     div.classList.add("check");
     // allow easy lookup
     div.id = book.bookID;
+    div.tabIndex = 0; // make books tabbable in the order they're added
 
     let title = document.createElement("p")
     title.classList.add("title");
