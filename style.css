@@ -133,8 +133,8 @@ button:hover {
   grid-column: 1/2;
   grid-row: 2/4;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(autofit, 1fr);
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-rows: repeat(auto-fill, 250px);
   grid-auto-flow: row;
   gap: 15px;
   margin: 5px;
@@ -149,15 +149,15 @@ button:hover {
   padding: 30px;
   cursor: pointer;
 
-  width: 175px;
+  width: 150px;
   height: 250px;
 
 
 }
 
 .title {
-  font-weight: bold;
-  font-size: 1.7rem;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
 
 .pageCount {
