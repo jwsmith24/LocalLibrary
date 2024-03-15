@@ -39,11 +39,10 @@ function clearForm() {
 
 function generateBook() {
 
-
     let read = (finishedBookInput.checked) ? true : false;
     let newBook = new Book(title.value, authorInput.value, pageCountInput.value, read);
 
-
+    myLibrary.push(newBook);
 }
 
 
