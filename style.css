@@ -163,7 +163,7 @@ button:hover {
   width: 18px;
   height: 18px;
   background-image: url(resources/x-mark-16.png);
-  opacity: .5;
+  opacity: .3;
   overflow: hidden;
   bottom: -30px;
   left: 50%;
@@ -173,7 +173,7 @@ button:hover {
 .remove:hover {
   background-image: url(resources/x-mark-16.png);
   background-color: transparent;
-  opacity: .8;
+  opacity: .7;
 }
 
 .title {
