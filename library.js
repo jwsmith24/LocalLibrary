@@ -112,6 +112,7 @@ function bookbuilder(book) {
 
     let remove = document.createElement("button");
     remove.classList.add("remove");
+    remove.id = book.bookID;
 
     remove.addEventListener('click', (e) => {
         removeCard(e.target.id);
