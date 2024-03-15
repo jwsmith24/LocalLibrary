@@ -261,3 +261,8 @@ form {
 form>p>*:focus {
   box-shadow: 0 0 5px rgb(60, 162, 180);
 }
+
+.buttons:focus {
+
+  box-shadow: 0 0 5px rgb(60, 162, 180);
+}
