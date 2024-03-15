@@ -1,3 +1,28 @@
+const addBookButton = document.querySelector(".addBook");
+const newBookPopup = document.querySelector(".bookPopup");
+const submitButton = document.getElementById("submit");
+const cancelButton = document.getElementById("cancel");
+
+addBookButton.addEventListener("click", () => {
+    newBookPopup.showModal();
+});
+
+cancelButton.addEventListener("click", () => {
+    newBookPopup.close();
+})
+
+submitButton.addEventListener("click", (e) => {
+    e.preventDefault; // avoid submitting form
+
+
+    newBookPopup.close(book);
+
+});
+
+function generateBook() {
+    
+}
+
 
 const myLibrary = [];
 
