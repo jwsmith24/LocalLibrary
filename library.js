@@ -3,7 +3,7 @@ const newBookPopup = document.querySelector(".bookPopup");
 const submitButton = document.getElementById("submit");
 const cancelButton = document.getElementById("cancel");
 
-const title = document.getElementById("title");
+const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pageCountInput = document.getElementById("pages");
 const finishedBookInput = document.getElementById("read");
@@ -12,7 +12,14 @@ const bookshelf = document.getElementById("bookshelf");
 const myLibrary = [];
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    resetLibrary();
+}, { once: true });
 
+document.addEventListener("DOMContentLoaded", () => {
+    dummyBooks();
+    refreshCards();
+});
 
 
 addBookButton.addEventListener("click", () => {
@@ -45,8 +52,15 @@ function generateBook() {
     let read = (finishedBookInput.checked) ? true : false;
     let newBook = new Book(title.value, authorInput.value, pageCountInput.value, read);
 
-    myLibrary.push(newBook);
+    addBookToLibrary(newBook);
     refreshCards();
+}
+
+function addBookToLibrary(newBook) {
+    newBook.assignID();
+    myLibrary.push(newBook);
+    console.log(`${newBook.title} added to the library! ID: ${newBook.bookID}`);
+    return `${newBook.title} added to the library! ID: ${newBook.bookID}`;
 }
 
 function refreshCards() {
@@ -67,15 +81,17 @@ function resetLibrary() {
 
 function clearCards() {
     bookshelf.innerHTML = "";
+
 }
 
-function bookbuilder(titleInput, authorInput, pageCount, hasRead) {
+function bookbuilder(bookTitle, authorInput, pageCount, hasRead) {
     let div = document.createElement("div")
     div.classList.add("book");
+    div.classList.add("check");
 
     let title = document.createElement("p")
     title.classList.add("title");
-    title.textContent = titleInput;
+    title.textContent = bookTitle;
 
     let author = document.createElement("p")
     author.classList.add("author");
@@ -99,33 +115,41 @@ function bookbuilder(titleInput, authorInput, pageCount, hasRead) {
 }
 
 
-function Book(title, author, pages, hasRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.hasRead = hasRead;
-}
-
-Book.prototype.readBook = function () {
-
-    if (this.hasRead) {
-        return `You've already read ${this.title}`;
+class Book {
+    constructor(title, author, pages, hasRead, bookID = -1) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.hasRead = hasRead;
+        this.bookID = bookID;
     }
 
-    this.hasRead = true;
-    return `You've finished ${this.title}`;
+    readBook() {
+
+        if (this.hasRead) {
+            return `You've already read ${this.title} ID: ${this.bookID}`;
+        }
+
+        this.hasRead = true;
+        return `You've finished ${this.title} ID: ${this.bookID}`;
+    }
+
+    /** If book doesn't have an id, assign one. */
+    assignID() {
+        let newID = myLibrary.length;
+        this.bookID = (this.bookID === -1) ? this.bookID = newID : this.book
+    }
 }
 
-function addBookToLibrary(newBook) {
 
-    myLibrary.push(newBook);
-    return `${newBook.title} added to the library!`;
+function dummyBooks() {
+    // Add some sample books to start
+    myLibrary.push(new Book('The Poppy War', 'RF Kuang', 452, true));
+    myLibrary.push(new Book('The Dragon Republic', 'RF Kuang', 618, false, 1));
+    myLibrary.push(new Book('The Burning God', 'RF Kuang', 705, false, 2));
+
+
 }
-
-// Add some sample books to start
-myLibrary.push(new Book('The Poppy War', 'RF Kuang', 452, true));
-myLibrary.push(new Book('The Dragon Republic', 'RF Kuang', 618, false));
-myLibrary.push(new Book('The Burning God', 'RF Kuang', 705, false));
 
 
 myLibrary.forEach((book) => {

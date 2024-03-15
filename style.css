@@ -206,3 +206,27 @@ form {
   justify-content: space-evenly;
   margin-top: 10px;
 }
+
+/* Read checkbox */
+
+.check {
+  position: relative;
+}
+
+.check::after {
+  position: absolute;
+  content: "";
+  background-image: url(img/unchecked.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+
+  right: 15px;
+
+}
+
+
+
+.check.complete::after {
+  background-image: url(img/checked.svg);
+}
