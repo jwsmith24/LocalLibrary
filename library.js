@@ -3,6 +3,11 @@ const newBookPopup = document.querySelector(".bookPopup");
 const submitButton = document.getElementById("submit");
 const cancelButton = document.getElementById("cancel");
 
+newBookPopup.addEventListener("close", (e) => {
+
+    let 
+})
+
 addBookButton.addEventListener("click", () => {
     newBookPopup.showModal();
 });
@@ -20,7 +25,7 @@ submitButton.addEventListener("click", (e) => {
 });
 
 function generateBook() {
-    
+
 }
 
 
