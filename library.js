@@ -60,6 +60,11 @@ function refreshCards() {
 
 }
 
+function resetLibrary() {
+    myLibrary.splice(0, myLibrary.length)
+    refreshCards();
+}
+
 function clearCards() {
     bookshelf.innerHTML = "";
 }
