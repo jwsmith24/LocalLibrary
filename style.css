@@ -230,3 +230,7 @@ form {
 .check.complete::after {
   background-image: url(img/checked.svg);
 }
+
+.complete {
+  background-color: rgba(128, 128, 128, 0.12);
+}
