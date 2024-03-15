@@ -59,6 +59,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+
 }
 
 /*
@@ -222,7 +223,7 @@ form {
 .check::after {
   position: absolute;
   content: "";
-  background-image: url(img/unchecked.svg);
+  background-image: url(resources/unchecked.svg);
   background-size: cover;
   width: 24px;
   height: 24px;
@@ -235,7 +236,7 @@ form {
 
 
 .check.complete::after {
-  background-image: url(img/checked.svg);
+  background-image: url(resources/checked.svg);
 }
 
 .complete {
