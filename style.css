@@ -145,7 +145,7 @@ button:hover {
 }
 
 .book {
-
+  position: relative;
   border: 0.5px solid transparent;
   box-shadow: 0 0 10px rgb(60, 162, 180);
   border-radius: 10px;
@@ -154,8 +154,26 @@ button:hover {
 
   width: 150px;
   height: 250px;
+}
 
+.remove {
+  position: absolute;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
 
+  background-image: url(resources/x-mark-16.png);
+  opacity: .2;
+
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.remove:hover {
+  background-image: url(resources/x-mark-16.png);
+  background-color: transparent;
+  opacity: .6;
 }
 
 .title {

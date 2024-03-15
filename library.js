@@ -84,6 +84,11 @@ function clearCards() {
 
 }
 
+function removeCard(cardID) {
+    myLibrary.splice(cardID, 1);
+    refreshCards();
+}
+
 function bookbuilder(book) {
 
     let div = document.createElement("div");
@@ -104,6 +109,13 @@ function bookbuilder(book) {
     let pages = document.createElement("p")
     pages.classList.add("pageCount");
     pages.textContent = book.pages;
+
+    let remove = document.createElement("button");
+    remove.classList.add("remove");
+
+    remove.addEventListener('click', (e) => {
+        removeCard(e.target.id);
+    })
 
     // Use as a selector to apply a checkmark 
     if (book.hasRead) {
@@ -126,7 +138,7 @@ function bookbuilder(book) {
 
     })
 
-
+    div.appendChild(remove);
     div.appendChild(title)
     div.appendChild(author)
     div.appendChild(pages);
