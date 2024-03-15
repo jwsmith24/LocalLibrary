@@ -1,0 +1,38 @@
+
+const myLibrary = [];
+
+function Book(title, author, pages, hasRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.hasRead = hasRead;
+}
+
+Book.prototype.readBook = function() {
+    
+    if(this.hasRead) {
+        return `You've already read ${this.title}`;
+    }
+
+    this.hasRead = true;
+    return `You've finished ${this.title}`;
+}
+
+function addBookToLibrary(newBook) {
+
+    myLibrary.push(newBook);
+    return `${newBook.title} added to the library!`;
+}
+
+// Add some sample books to start
+myLibrary.push(new Book('The Poppy War', 'RF Kuang', 452, true));
+myLibrary.push(new Book('The Dragon Republic', 'RF Kuang', 618, false));
+myLibrary.push(new Book('The Burning God', 'RF Kuang', 705, false));
+
+
+myLibrary.forEach((book) => {
+    console.log(book.readBook());
+})
+
+
+
