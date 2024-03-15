@@ -67,10 +67,11 @@ function refreshCards() {
 
     clearCards();
 
-    myLibrary.forEach((book) => {
-
+    for (let i = 0; i < myLibrary.length; i++) {
+        const book = myLibrary[i];
+        book.bookID = i;
         bookbuilder(book);
-    })
+    }
 
 }
 
@@ -150,12 +151,12 @@ function bookbuilder(book) {
 
 
 class Book {
-    constructor(title, author, pages, hasRead, bookID = -1) {
+    constructor(title, author, pages, hasRead) {
         this.title = title;
         this.author = author;
         this.pages = pages;
         this.hasRead = hasRead;
-        this.bookID = bookID;
+        this.bookID = this.assignID();
     }
 
     readBook() {
@@ -171,8 +172,8 @@ class Book {
 
     /** If book doesn't have an id, assign one. */
     assignID() {
-        let newID = myLibrary.length;
-        this.bookID = (this.bookID === -1) ? this.bookID = newID : this.book
+        return myLibrary.length;
+
     }
 
     toggleComplete() {
