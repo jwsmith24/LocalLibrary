@@ -162,9 +162,6 @@ button:hover {
   width: 18px;
   height: 18px;
 
-  background-image: url(resources/x-mark-16.png);
-  opacity: .2;
-
   bottom: -30px;
   left: 50%;
   transform: translate(-50%);
