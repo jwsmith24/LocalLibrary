@@ -7,6 +7,9 @@ const title = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pageCountInput = document.getElementById("pages");
 const finishedBookInput = document.getElementById("read");
+const bookshelf = document.getElementById("bookshelf");
+
+const myLibrary = [];
 
 
 
@@ -36,17 +39,60 @@ function clearForm() {
     finishedBookInput.checked = false;
 }
 
-
+// Create a new book and add it too the library.
 function generateBook() {
 
     let read = (finishedBookInput.checked) ? true : false;
     let newBook = new Book(title.value, authorInput.value, pageCountInput.value, read);
 
     myLibrary.push(newBook);
+    refreshCards();
 }
 
+function refreshCards() {
 
-const myLibrary = [];
+    clearCards();
+
+    myLibrary.forEach((book) => {
+
+        bookbuilder(book.title, book.author, book.pages, book.hasRead);
+    })
+
+}
+
+function clearCards() {
+    bookshelf.innerHTML = "";
+}
+
+function bookbuilder(titleInput, authorInput, pageCount, hasRead) {
+    let div = document.createElement("div")
+    div.classList.add("book");
+
+    let title = document.createElement("p")
+    title.classList.add("title");
+    title.textContent = titleInput;
+
+    let author = document.createElement("p")
+    author.classList.add("author");
+    author.textContent = authorInput;
+
+    let pages = document.createElement("p")
+    pages.classList.add("pageCount");
+    pages.textContent = pageCount;
+
+    // Use as a selector to apply a checkmark 
+    if (hasRead) {
+        div.classList.add("complete");
+    }
+
+    div.appendChild(title)
+    div.appendChild(author)
+    div.appendChild(pages);
+
+    bookshelf.appendChild(div);
+
+}
+
 
 function Book(title, author, pages, hasRead) {
     this.title = title;
