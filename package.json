@@ -1,5 +1,5 @@
 {
-  "name": "locallibrary",
+  "name": "local-library",
   "version": "1.0.0",
   "description": "Small library app for practice with basic OOP Javascript features.",
   "main": "library.js",
@@ -8,13 +8,24 @@
     "build": "npx webpack",
     "cBuild": "npx webpack --watch"
   },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.2.0",
     "css-loader": "^7.1.1",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^9.1.0",
     "file-loader": "^6.2.0",
+    "globals": "^15.1.0",
     "html-webpack-plugin": "^5.6.0",
+    "prettier": "^3.2.5",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
