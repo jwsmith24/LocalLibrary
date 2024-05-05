@@ -116,6 +116,28 @@ button:hover {
   background-color: rgb(165, 151, 168);
 }
 
+.drop-menu {
+  position: absolute;
+  width: 150px;
+  z-index: 10;
+  top: 500px;
+}
+
+.menu-opts > li {
+  border: 1px solid black;
+
+  padding: 6px;
+}
+
+.menu-opts > li:hover {
+  background-color: rgb(83, 165, 180);
+  cursor: pointer;
+}
+
+.drop-icon {
+  position: relative;
+}
+
 .toolbar {
   border: 1px solid rgba(0, 0, 0, 0.199);
   background-color: rgba(60, 182, 204, 0.507);

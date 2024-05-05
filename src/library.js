@@ -1,5 +1,6 @@
 import { bookTileBuilder } from './book-builder';
 import { Book } from './book';
+import { initDropdown } from './drop-down';
 import '../style.css';
 
 const addBookButton = document.querySelector('.addBook');
@@ -15,10 +16,37 @@ const bookshelf = document.getElementById('bookshelf');
 
 export const myLibrary = [];
 
+const dropDownOptions = [];
+
+function defineDropdownOptions() {
+  const homeOption = {
+    id: 'home',
+    href: 'https://google.com',
+  };
+
+  const shelfOption = {
+    id: 'shelf',
+    href: 'https://mail.google.com',
+  };
+
+  const aboutOption = {
+    id: 'about',
+    href: 'https://github.com/jwsmith24?tab=repositories',
+  };
+
+  dropDownOptions.push(homeOption);
+  dropDownOptions.push(shelfOption);
+  dropDownOptions.push(aboutOption);
+  console.log('Options: ');
+  console.log(dropDownOptions);
+  initDropdown(dropDownOptions);
+}
+
 document.addEventListener(
   'DOMContentLoaded',
   () => {
     resetLibrary();
+    defineDropdownOptions();
   },
   { once: true }
 );
