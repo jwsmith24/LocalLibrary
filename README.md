@@ -9,3 +9,6 @@ The home page displays the latest activities happening at the library featuring 
 Each user has their own bookshelf stored locally on the browser and can manage the contents during their session. Books are added by clicking the "Add Book" button in the top right of the shelf page. Shelf entries track the title, author, page count, and whether it has been read.
 
 Books can be removed from the shelf by clicking on the red x below each one and read status is toggled by clicking on the entry.
+
+> [!NOTE]
+> This program was completed as part of The Odin Project JavaScript course.
