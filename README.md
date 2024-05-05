@@ -12,3 +12,9 @@ Books can be removed from the shelf by clicking on the red x below each one and 
 
 > [!NOTE]
 > This program was completed as part of The Odin Project JavaScript course.
+> Key skills practiced:
+>
+> - Basic OOP features in JavaScript and ES6 modules.
+> - Static analysis tools (ESLint and Prettier).
+> - Integration with Webpack.
+> - Integration with npm to include publishing a module.
