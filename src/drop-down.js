@@ -1,4 +1,13 @@
-// given a menu option object with attributes id and href, add event listeners each option.
+/**
+ * Creates a functional drop down menu given html elements and target path.
+ *
+ * Accepts an array of menu option objects in the format:
+ *
+ * {
+ * id: <selector id>
+ * href: <rel path to target>
+ * }
+ */
 export const initDropdown = (menuOptions) => {
   const dropDownMenu = document.getElementById('drop-icon');
   dropDownMenu.addEventListener('click', () => {
@@ -17,7 +26,7 @@ export const initDropdown = (menuOptions) => {
   });
 };
 
-export function linkButton(buttonElementId, href) {
+function linkButton(buttonElementId, href) {
   console.log('Linking button with id: ' + buttonElementId);
   const button = document.getElementById(buttonElementId);
   button.addEventListener('click', () => {
