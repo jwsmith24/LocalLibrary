@@ -83,6 +83,22 @@ ul {
   padding: 0;
 }
 
+.reel {
+  position: absolute;
+  margin: 100px;
+  display: grid;
+  grid-template-columns: 100%;
+
+  justify-content: center;
+}
+
+.frame {
+  position: relative;
+  display: grid;
+
+  justify-content: center;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
