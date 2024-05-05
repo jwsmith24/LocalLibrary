@@ -5,6 +5,13 @@ export const initDropdown = (menuOptions) => {
     toggleDropDownVisibility();
   });
 
+  dropDownMenu.addEventListener('mouseover', () => {
+    toggleDropDownVisibility();
+  });
+  dropDownMenu.addEventListener('mouseout', () => {
+    toggleDropDownVisibility();
+  });
+
   menuOptions.forEach((element) => {
     linkButton(element.id, element.href);
   });

@@ -15,7 +15,9 @@ const finishedBookInput = document.getElementById('read');
 const bookshelf = document.getElementById('bookshelf');
 
 export const myLibrary = [];
+
 const dropDownOptions = [];
+
 function defineDropdownOptions() {
   const homeOption = {
     id: 'home',
@@ -38,6 +40,7 @@ function defineDropdownOptions() {
   console.log('Options: ');
   console.log(dropDownOptions);
 }
+
 defineDropdownOptions();
 initDropdown(dropDownOptions);
 
