@@ -1,6 +1,6 @@
 import { bookTileBuilder } from './book-builder';
 import { Book } from './book';
-import { initDropdown } from './drop-down';
+import { initDropdown } from 'drop-down-init';
 import '../style.css';
 
 const addBookButton = document.querySelector('.addBook');

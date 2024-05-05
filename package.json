@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^7.1.1",
+    "drop-down-init": "^1.0.3",
     "file-loader": "^6.2.0",
     "style-loader": "^4.0.0"
   },

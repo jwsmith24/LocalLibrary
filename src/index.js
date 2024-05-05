@@ -1,7 +1,7 @@
 // Application entry point - home page
 
 import '../style.css';
-import { initDropdown } from './drop-down';
+import { initDropdown } from 'drop-down-init';
 
 console.log('hi future home page');
 
