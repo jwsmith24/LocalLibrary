@@ -85,16 +85,27 @@ ul {
 
 .reel {
   display: flex;
-  gap: 2000px;
-  position: fixed;
-  margin: 100px;
-  width: 2000px;
-  grid-template-columns: 100%;
+}
+
+.reel img {
+  width: 100%;
+  height: auto;
 }
 
 .frame {
-  width: min-content;
+  position: relative;
+  width: 50%;
   overflow: hidden;
+}
+
+main {
+  display: grid;
+}
+
+.imgButtons {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .wrapper {
@@ -115,7 +126,7 @@ ul {
   gap: 15px;
 }
 
-button {
+dialog button {
   border-radius: 8px;
   border: 1px solid transparent;
   box-shadow: 0 0 5px rgb(83, 165, 180);
@@ -123,10 +134,6 @@ button {
   font-weight: bold;
   background-color: rgb(232, 244, 245);
   cursor: pointer;
-}
-
-button:hover {
-  background-color: rgb(165, 151, 168);
 }
 
 .drop-menu {
@@ -300,16 +307,6 @@ form {
   opacity: 0.8;
 }
 
-:focus {
-  outline: none;
-  border: 1px solid transparent;
-  box-shadow: 0 0 20px rgb(60, 162, 180);
-}
-
 form > p > *:focus {
-  box-shadow: 0 0 5px rgb(60, 162, 180);
-}
-
-.buttons:focus {
   box-shadow: 0 0 5px rgb(60, 162, 180);
 }
