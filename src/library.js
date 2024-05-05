@@ -15,9 +15,7 @@ const finishedBookInput = document.getElementById('read');
 const bookshelf = document.getElementById('bookshelf');
 
 export const myLibrary = [];
-
 const dropDownOptions = [];
-
 function defineDropdownOptions() {
   const homeOption = {
     id: 'home',
@@ -39,17 +37,9 @@ function defineDropdownOptions() {
   dropDownOptions.push(aboutOption);
   console.log('Options: ');
   console.log(dropDownOptions);
-  initDropdown(dropDownOptions);
 }
-
-document.addEventListener(
-  'DOMContentLoaded',
-  () => {
-    resetLibrary();
-    defineDropdownOptions();
-  },
-  { once: true }
-);
+defineDropdownOptions();
+initDropdown(dropDownOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
   dummyBooks();

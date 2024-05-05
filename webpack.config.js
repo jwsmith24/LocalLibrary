@@ -16,10 +16,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/library.html',
       filename: 'library.html',
+      chunks: ['library'],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      chunks: ['index'],
     }),
   ],
   module: {
