@@ -55,6 +55,7 @@ function clearForm() {
 // Create a new book and add it too the library.
 function generateBook() {
   let read = finishedBookInput.checked ? true : false;
+
   let newBook = new Book(
     titleInput.value,
     authorInput.value,
