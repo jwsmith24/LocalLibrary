@@ -15,7 +15,7 @@ function defineDropdownOptions() {
 
   const shelfOption = {
     id: 'shelf',
-    href: 'https://mail.google.com',
+    href: 'library.html',
   };
 
   const aboutOption = {

@@ -24,7 +24,7 @@ function defineDropdownOptions() {
 
   const shelfOption = {
     id: 'shelf',
-    href: 'https://mail.google.com',
+    href: 'library.html',
   };
 
   const aboutOption = {
@@ -100,11 +100,6 @@ export function refreshCards() {
     book.bookID = i;
     bookTileBuilder(book, bookshelf);
   }
-}
-
-function resetLibrary() {
-  myLibrary.splice(0, myLibrary.length);
-  refreshCards();
 }
 
 function clearCards() {
