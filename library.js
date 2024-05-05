@@ -70,7 +70,7 @@ function refreshCards() {
     for (let i = 0; i < myLibrary.length; i++) {
         const book = myLibrary[i];
         book.bookID = i;
-        bookbuilder(book);
+        bookBuilder(book);
     }
 
 }
@@ -90,7 +90,7 @@ function removeCard(cardID) {
     refreshCards();
 }
 
-function bookbuilder(book) {
+function bookBuilder(book) {
 
     let div = document.createElement("div");
     div.classList.add("book");
@@ -119,7 +119,7 @@ function bookbuilder(book) {
         removeCard(e.target.id);
     })
 
-    // Use as a selector to apply a checkmark 
+    // Use as a selector to apply a check mark 
     if (book.hasRead) {
         div.classList.add("complete");
     }
