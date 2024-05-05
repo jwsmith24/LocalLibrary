@@ -96,9 +96,11 @@ ul {
   position: relative;
   width: 50%;
   overflow: hidden;
+  justify-self: center;
 }
 
 main {
+  margin: 10px;
   display: grid;
 }
 

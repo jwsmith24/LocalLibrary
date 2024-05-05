@@ -1,7 +1,9 @@
 // Application entry point - home page
 
 import '../style.css';
+import '../src/index.html';
 import { initDropdown } from 'drop-down-init';
+import { initReel } from './reel';
 
 console.log('hi future home page');
 
@@ -32,3 +34,5 @@ function defineDropdownOptions() {
 
 defineDropdownOptions();
 initDropdown(dropDownOptions);
+
+document.addEventListener('DOMContentLoaded', () => initReel());
