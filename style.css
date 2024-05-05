@@ -1,3 +1,10 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(resources/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -26,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
   width: 100vw;
   height: 100vh;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*
@@ -81,7 +88,6 @@ ul {
 
 
 
-/* Header > toolbar > bookshelf*/
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;

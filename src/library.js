@@ -1,5 +1,5 @@
 import { bookTileBuilder } from "./book-builder";
-
+import "../style.css";
 
 const addBookButton = document.querySelector(".addBook");
 const newBookPopup = document.querySelector(".bookPopup");
