@@ -84,19 +84,17 @@ ul {
 }
 
 .reel {
-  position: absolute;
+  display: flex;
+  gap: 2000px;
+  position: fixed;
   margin: 100px;
-  display: grid;
+  width: 2000px;
   grid-template-columns: 100%;
-
-  justify-content: center;
 }
 
 .frame {
-  position: relative;
-  display: grid;
-
-  justify-content: center;
+  width: min-content;
+  overflow: hidden;
 }
 
 .wrapper {
