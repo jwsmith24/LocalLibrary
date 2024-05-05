@@ -21,7 +21,7 @@ const dropDownOptions = [];
 function defineDropdownOptions() {
   const homeOption = {
     id: 'home',
-    href: 'https://google.com',
+    href: 'index.html',
   };
 
   const shelfOption = {

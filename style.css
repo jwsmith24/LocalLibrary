@@ -87,9 +87,8 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  padding: 10px;
+
   gap: 15px;
-  margin: 15px;
 }
 
 .main {
@@ -121,6 +120,7 @@ button:hover {
   width: 150px;
   z-index: 10;
   top: 500px;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.486);
 }
 
 .menu-opts > li {
@@ -141,7 +141,6 @@ button:hover {
 .toolbar {
   border: 1px solid rgba(0, 0, 0, 0.199);
   background-color: rgba(60, 182, 204, 0.507);
-  border-radius: 5px;
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
