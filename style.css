@@ -96,12 +96,14 @@ ul {
   position: relative;
   width: 50%;
   overflow: hidden;
-  justify-self: center;
 }
 
 main {
-  margin: 10px;
+  margin: 24px;
   display: grid;
+  gap: 48px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .imgButtons {

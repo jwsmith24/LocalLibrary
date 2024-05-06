@@ -46,7 +46,6 @@ defineDropdownOptions();
 initDropdown(dropDownOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
-  dummyBooks();
   refreshCards();
 });
 
@@ -114,14 +113,3 @@ export function removeCard(cardID) {
   myLibrary.splice(cardID, 1);
   refreshCards();
 }
-
-function dummyBooks() {
-  // Add some sample books to start
-  myLibrary.push(new Book('The Poppy War', 'RF Kuang', 452, true));
-  myLibrary.push(new Book('The Dragon Republic', 'RF Kuang', 618, false, 1));
-  myLibrary.push(new Book('The Burning God', 'RF Kuang', 705, false, 2));
-}
-
-myLibrary.forEach((book) => {
-  console.log(book.readBook());
-});
