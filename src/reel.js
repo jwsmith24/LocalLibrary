@@ -71,7 +71,7 @@ export const initReel = () => {
 
   function prevImage() {
     reelIndex = reelIndex === 0 ? reel.children.length - 1 : reelIndex - 1;
-    resetTimer();
+    resetTimer;
     updateCircles();
     showImage(reelIndex);
   }
