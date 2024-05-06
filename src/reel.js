@@ -1,8 +1,17 @@
 export const initReel = () => {
   const reel = document.querySelector('.reel');
+  // add listeners to pause timer on mouseover
+  reel.addEventListener('mouseenter', () => {
+    stopTimer();
+  });
+  reel.addEventListener('mouseleave', () => {
+    startTimer();
+  });
+
   const nextButton = document.getElementById('next-btn');
   const prevButton = document.getElementById('prev-btn');
   let reelIndex = 0;
+
   const interval = 5000; // interval in milliseconds
   let timer;
 
