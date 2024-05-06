@@ -35,7 +35,6 @@ cancelButton.addEventListener('click', () => {
 
 submitButton.addEventListener('click', (e) => {
   e.preventDefault(); // avoid submitting form
-
   generateBook();
   newBookPopup.close();
   clearForm();
