@@ -37,6 +37,7 @@ loginButton.addEventListener('click', (e) => {
   } else {
     console.log('Nice job!');
     loginForm.reset();
+    window.location = 'library.html';
   }
 });
 
