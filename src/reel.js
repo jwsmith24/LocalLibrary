@@ -12,7 +12,7 @@ export const initReel = () => {
   const prevButton = document.getElementById('prev-btn');
   let reelIndex = 0;
 
-  const interval = 5000; // interval in milliseconds
+  const interval = 4000; // interval in milliseconds
   let timer;
 
   function showImage(index) {
