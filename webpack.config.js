@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     library: './src/library.js',
     index: './src/index.js',
+    login: './src/login.js',
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -22,6 +23,11 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/login.html',
+      filename: 'login.html',
+      chunks: ['login'],
     }),
   ],
   module: {

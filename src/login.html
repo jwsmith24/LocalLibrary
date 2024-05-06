@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Library | Login</title>
+  </head>
+  <body>
+    <header>
+      <div class="toolbar">
+        <div id="drop-icon">
+          <img
+            src="../resources/menu-icon.png"
+            alt="Drop down menu icon"
+            width="35"
+            height="auto"
+          />
+          <div class="drop-menu">
+            <ul class="menu-opts">
+              <li id="home">Home</li>
+              <li id="shelf">Bookshelf</li>
+              <li id="about">About</li>
+              <li id="signIn">Sign In</li>
+            </ul>
+          </div>
+        </div>
+        <h2>Local Library</h2>
+      </div>
+    </header>
+    <div class="form-wrapper">
+      <form novalidate id="login-form">
+        <h2>Login to your account</h2>
+
+        <label for="mail">Email: </label>
+        <input type="email" name="mail" id="mail" title="Enter email" />
+
+        <label for="password">Password: </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          title="Enter password"
+        />
+
+        <label for="confirm-password">Confirm Password: </label>
+        <input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          title="Confirm password"
+        />
+
+        <label for="country">Country: </label>
+        <input
+          list="countries"
+          id="country"
+          name="country"
+          title="Select country"
+        />
+        <datalist id="countries">
+          <option value="us">United States</option>
+          <option value="can">Canada</option>
+        </datalist>
+
+        <label for="zip">Zip Code: </label>
+        <input
+          type="text"
+          name="zip"
+          id="zip"
+          pattern="[0-9]{5}"
+          title="Enter 5-digit zip code"
+        />
+
+        <button id="login-button">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

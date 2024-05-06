@@ -7,6 +7,7 @@ import { initReel } from './reel';
 import { getDropDownOptions } from './drop-down';
 
 console.log('hi future home page');
-initDropdown(getDropDownOptions());
+const dropDownOptions = getDropDownOptions();
+initDropdown(dropDownOptions);
 
 document.addEventListener('DOMContentLoaded', () => initReel());

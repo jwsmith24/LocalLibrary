@@ -15,9 +15,15 @@ function defineDropdownOptions() {
     href: 'https://github.com/jwsmith24?tab=repositories',
   };
 
+  const signInOption = {
+    id: 'signIn',
+    href: 'login.html',
+  };
+
   dropDownOptions.push(homeOption);
   dropDownOptions.push(shelfOption);
   dropDownOptions.push(aboutOption);
+  dropDownOptions.push(signInOption);
 
   return dropDownOptions;
 }
