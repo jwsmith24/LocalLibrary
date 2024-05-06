@@ -1,6 +1,7 @@
 import { bookTileBuilder } from './book-builder';
 import { Book } from './book';
 import { initDropdown } from 'drop-down-init';
+import { getDropDownOptions } from './drop-down';
 import './style.css';
 import './index.html';
 
@@ -17,33 +18,7 @@ const bookshelf = document.getElementById('bookshelf');
 
 export const myLibrary = [];
 
-const dropDownOptions = [];
-
-function defineDropdownOptions() {
-  const homeOption = {
-    id: 'home',
-    href: 'index.html',
-  };
-
-  const shelfOption = {
-    id: 'shelf',
-    href: 'library.html',
-  };
-
-  const aboutOption = {
-    id: 'about',
-    href: 'https://github.com/jwsmith24?tab=repositories',
-  };
-
-  dropDownOptions.push(homeOption);
-  dropDownOptions.push(shelfOption);
-  dropDownOptions.push(aboutOption);
-  console.log('Options: ');
-  console.log(dropDownOptions);
-}
-
-defineDropdownOptions();
-initDropdown(dropDownOptions);
+initDropdown(getDropDownOptions());
 
 document.addEventListener('DOMContentLoaded', () => {
   refreshCards();
