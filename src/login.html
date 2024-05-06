@@ -30,9 +30,17 @@
     <div class="form-wrapper">
       <form novalidate id="login-form">
         <h2>Login to your account</h2>
+        <p>This form is brought to you by the JavaScript Validation API!</p>
 
         <label for="mail">Email: </label>
-        <input type="email" name="mail" id="mail" title="Enter email" />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          title="Enter email"
+          required
+        />
+        <div class="bad-input" id="email-error"></div>
 
         <label for="password">Password: </label>
         <input
@@ -40,7 +48,9 @@
           name="password"
           id="password"
           title="Enter password"
+          required
         />
+        <div class="bad-input" id="password-error"></div>
 
         <label for="confirm-password">Confirm Password: </label>
         <input
@@ -48,19 +58,18 @@
           name="confirm-password"
           id="confirm-password"
           title="Confirm password"
+          required
         />
+        <div class="bad-input" id="confirm-error"></div>
 
         <label for="country">Country: </label>
-        <input
-          list="countries"
-          id="country"
-          name="country"
-          title="Select country"
-        />
-        <datalist id="countries">
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Select your country</option>
           <option value="us">United States</option>
           <option value="can">Canada</option>
-        </datalist>
+        </select>
+
+        <div class="bad-input" id="country-error"></div>
 
         <label for="zip">Zip Code: </label>
         <input
@@ -69,7 +78,9 @@
           id="zip"
           pattern="[0-9]{5}"
           title="Enter 5-digit zip code"
+          required
         />
+        <div class="bad-input" id="zip-error"></div>
 
         <button id="login-button">Login</button>
       </form>
