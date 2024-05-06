@@ -64,14 +64,14 @@ export const initReel = () => {
 
   function nextImage() {
     reelIndex = reelIndex === reel.children.length - 1 ? 0 : reelIndex + 1;
-
+    resetTimer();
     updateCircles();
     showImage(reelIndex);
   }
 
   function prevImage() {
     reelIndex = reelIndex === 0 ? reel.children.length - 1 : reelIndex - 1;
-
+    resetTimer();
     updateCircles();
     showImage(reelIndex);
   }
