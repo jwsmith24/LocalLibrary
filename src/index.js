@@ -1,7 +1,7 @@
 // Application entry point - home page
 
-import '../style.css';
-import '../src/index.html';
+import './style.css';
+import './index.html';
 import { initDropdown } from 'drop-down-init';
 import { initReel } from './reel';
 
