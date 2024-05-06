@@ -21,6 +21,7 @@ Books can be removed from the shelf by clicking on the red x below each one and 
 > Key skills practiced:
 >
 > - Basic OOP features in JavaScript and ES6 modules.
-> - Static analysis tools (ESLint and Prettier).
-> - Integration with Webpack.
+> - Static analysis tools: ESLint, Prettier, and integrating them into a project within VS Code.
+> - Building common components (drop down menus and image carousels) with vanilla JavaScript.
+> - Building with Webpack and appropriate plugins.
 > - Integration with npm to include publishing a module.
