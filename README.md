@@ -1,6 +1,6 @@
 # LocalLibrary
 
-View the latest activities and keep track of your favorite reads with Local Library.
+View the latest activities happening in the community and keep track of your favorite reads with Local Library.
 
 ## Using the Application
 
